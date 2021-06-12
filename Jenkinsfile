@@ -2,7 +2,7 @@ node{
 
     stage('SCM Checkout')
     {
-        git url: 'https://github.com/raquelbatista/CD-nodejs-app.git'
+        git url: 'https://github.com/raquelbatista/PD_CD.git'
     }
     
     
