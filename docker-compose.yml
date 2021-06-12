@@ -1,0 +1,24 @@
+version: "3.3"
+
+services:
+  my-mongodb:
+    image: mongo
+    container_name: mongodb-${NODE_ENV}
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongo-entrypoint:/docker-entrypoint-initdb.d
+      - mongodb:/data/db
+      - mongoconfig:/data/configdb
+    logging:
+      driver: "json-file"
+      options:
+        max-size: 10m
+        max-file: "3"
+        labels: "production_status"
+        env: "os"
+
+volumes:
+  mongodb:
+  mongoconfig:
