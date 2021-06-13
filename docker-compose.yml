@@ -21,7 +21,7 @@ services:
   myapp:
     image: "raquelbatista/pd_cd"
     ports: 
-      - 8081:8081
+      - 8090:8090
     container_name: "myapp"
 
 volumes:
