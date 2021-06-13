@@ -18,11 +18,11 @@ services:
         max-file: "3"
         labels: "production_status"
         env: "os"
-    app:
+    myapp:
       image: "raquelbatista/pd_cd"
       ports: 
         - 8081:8081
-      container_name: "app"
+      container_name: "myapp"
 
 volumes:
   mongodb:
