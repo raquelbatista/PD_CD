@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 client.connect(err => {
   db = client.db("mongodb").collection("cds");
-  app.listen(8081, function(){
+  app.listen(8090, function(){
 	console.log("Servidor em execução na porta 8090");
 });
   // perform actions on the collection object
