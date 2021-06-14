@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>CD Collection</title>
 </head>
+
 <body>
   <div class="header">
     <a href="#default" class="logo">CD Collection Platform</a>
     <div class="header-right">
       <a class="active" href="/">Home</a>
       <a href="/" aria-pressed="true">Back</a>
+
     </div>
   </div>
+
   <table width="80%" border="5" class="content-table" style="border:1px solid black;margin-left:auto;margin-right:auto;">
     <thead>
       <tr>
@@ -21,15 +25,25 @@
       </tr>
     </thead>
     <tbody>
-    <% cds.forEach(function(details) { %>
-      <tr>
-        <td><%= details.title %></td>
-        <td><%= details.artist %></td>
-        <td><%= details.genre %></td>
-        <td><a href="/edit/<%= details._id %>">Edit</a> | <a href="/delete/<%= details._id %>">Delete</a></td>
-      </tr>
-    <% }) %>
+      <% cds.forEach(function(details) { %>
+        <tr>
+          <td>
+            <%= details.title %>
+          </td>
+          <td>
+            <%= details.artist %>
+          </td>
+          <td>
+            <%= details.genre %>
+          </td>
+          <td><a class="fcn-edit_cancel" href="/edit/<%= details._id %>">Edit</a> | <a class="fcn-edit_cancel"
+              href="/delete/<%= details._id %>">Delete</a></td>
+        </tr>
+        <% }) %>
     </tbody>
-    <button><a href="/">Back</a></button>
+  </table>
+  <br>
+    <style>
+    </style>
 </body>
 </html>
