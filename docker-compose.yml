@@ -19,7 +19,7 @@ services:
         labels: "production_status"
         env: "os"
   myapp:
-    image: "myappimage:1.0"
+    image: "raquelbatista/myappimage:1.0"
     ports: 
       - 8090:8090
     container_name: "myapp"
