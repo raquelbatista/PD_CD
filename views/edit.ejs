@@ -1,21 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>CD Collection</title>
 </head>
+
 <body>
-  div class="brand-logo"></div>
-  <div class="brand-title">Platform</div>
-  <div class="inputs">
-    <% cds.forEach(function(details) { %>
-      <form action="/edit/<%= details._id %>" method="POST">
-        <input type="text" value="<%= details.title %>" name="title">
-        <input type="text" value="<%= details.artist %>" name="artist">
-        <input type="text" value="<%= details.genre %>" name="genre">
-        <br />
-        <button><a href="/show">List All</a></button>
-        <button type="submit">Edit</button>
-      </form>
-  <% }) %></body>
+  <div class="container">
+    <div class="brand-logo"></div>
+    <div class="brand-title">Platform</div>
+    <div class="inputs">
+
+      <% cds.forEach(function(details) { %>
+        <form action="/edit/<%= details._id %>" method="POST">
+          <label for="fname">Tittle</label>
+          <input class="input" type="text" value="<%= details.title %>" name="title">
+          <label for="artist">Artist</label>
+          <input class="input" type="text" value="<%= details.artist %>" name="artist">
+          <label for="genre">Genre</label>
+          <input class="input" type="text" value="<%= details.genre %>" name="genre">
+
+          <button type="submit" class="btn btn-sucess">Edit Music</button>
+          <button action="/show">List All</button>
+        </form>
+    </div>
+  </div>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+
+
+    body {
+      margin: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #ecf0f3;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      place-items: center;
+      overflow: hidden;
+      font-family: poppins;
+    }
+
+    .container {
+      position: relative;
+      width: 350px;
+      height: 600px;
+      border-radius: 20px;
+      padding: 40px;
+      box-sizing: border-box;
+      background: #ecf0f3;
+      box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+    }
+  </style>
+  <% }) %>
+</body>
 </html>
