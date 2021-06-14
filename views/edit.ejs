@@ -5,14 +5,17 @@
   <title>CD Collection</title>
 </head>
 <body>
-  <% cds.forEach(function(details) { %>
-    <form action="/edit/<%= details._id %>" method="POST">
-      <input type="text" value="<%= details.title %>" name="title">
-      <input type="text" value="<%= details.artist %>" name="artist">
-      <input type="text" value="<%= details.genre %>" name="genre">
-      <br />
-      <button><a href="/show">List All</a></button>
-      <button type="submit">Edit</button>
-    </form>
+  div class="brand-logo"></div>
+  <div class="brand-title">Platform</div>
+  <div class="inputs">
+    <% cds.forEach(function(details) { %>
+      <form action="/edit/<%= details._id %>" method="POST">
+        <input type="text" value="<%= details.title %>" name="title">
+        <input type="text" value="<%= details.artist %>" name="artist">
+        <input type="text" value="<%= details.genre %>" name="genre">
+        <br />
+        <button><a href="/show">List All</a></button>
+        <button type="submit">Edit</button>
+      </form>
   <% }) %></body>
 </html>
