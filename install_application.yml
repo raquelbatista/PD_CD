@@ -4,8 +4,8 @@
   hosts: webservers
   become: yes
   vars:
-  - docker_container_name: "notepad"
-  - docker_mongo_container_name: "mongodb"
+  - docker_container_name: "myapp"
+  - docker_mongo_container_name: "mongodb-"
   - docker_mongo_image_name: "mongo"
   - docker_compose_version: "1.25.0"
   tasks:
