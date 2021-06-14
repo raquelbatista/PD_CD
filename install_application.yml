@@ -9,7 +9,8 @@
   - docker_mongo_image_name: "mongo"
   - docker_compose_version: "1.25.0"
   tasks:
-    - debug: msg=Hello Docker
+    - debug: 
+        msg: "Hello Docker"
 
     - name: "Check if docker is installed"
       shell: command -v docker >/dev/null 2>&1
