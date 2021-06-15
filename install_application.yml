@@ -72,7 +72,7 @@
          name: "{{docker_mongo_container_name}}"
          image: "{{docker_mongo_image_name}}"
          ports:
-          - "0.0.0.0:27017:27017"
+          - "0.0.0.0:27000:27000"
          state: started
 
     - name: "Stop and Remove all notepad containers"
