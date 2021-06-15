@@ -28,4 +28,10 @@ node{
             // sh 'docker push upasanatestdocker/mysql'
           
     }
+    stage('Execute ansible')
+    {
+        steps{
+            ansiblePlaybook credentialsId: 'privatekey_', disableHostKeyChecking: true, installation: 'ansible2', inventory: 'hosts.inv', playbook: 'install_application.yml'
+        }
+    }
 }
