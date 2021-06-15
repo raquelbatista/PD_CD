@@ -96,7 +96,7 @@
          name: "{{docker_container_name}}"
          image: "myappimage:1.0"
          ports:
-          - "127.0.0.1:8080:8080"
+          - "127.0.0.1:8090:8090"
          links:
           - "mongodb:db"
          state: started
