@@ -26,9 +26,9 @@
 
     - debug: msg="{{is_docker_compose_install}}"
 
-    - name: "Install required system packages"
-      apt: name={{ item }} state=latest update_cache=yes
-      loop: [ 'python3-pip', 'python3-setuptools']
+    #- name: "Install required system packages"
+    #  apt: name={{ item }} state=latest update_cache=yes
+    #  loop: [ 'python3-pip', 'python3-setuptools']
 
     - name: "Add Docker Repository"
       apt_repository:
