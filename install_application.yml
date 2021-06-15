@@ -75,12 +75,12 @@
           - "0.0.0.0:27000:27000"
          state: started
 
-    - name: "Stop and Remove all notepad containers"
+    - name: "Stop and Remove all myapp containers"
       docker_container:
          name: "{{docker_container_name}}"
          state: absent
 
-    - name: "Remove notepad Image"
+    - name: "Remove myapp Image"
       shell: "docker rmi $(docker images {{DOCKER_IMAGE_NAME}})"
       ignore_errors: yes
       
