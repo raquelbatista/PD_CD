@@ -81,7 +81,7 @@
          state: absent
 
     - name: "Remove myapp Image"
-      shell: "docker image rm myappimage"
+      shell: "docker rmi myappimage:1.0"
       ignore_errors: yes
       
     - name: "Pull docker image from DockerHub"
