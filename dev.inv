@@ -1,2 +1,2 @@
 [webservers]
-10.0.2.15 ansible_user=raquel ansible_ssh_pass=root1234
+127.0.0.1 ansible_user=user_pd ansible_ssh_pass=alexandrabatista
