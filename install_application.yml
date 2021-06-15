@@ -82,7 +82,7 @@
 
     - name: "Remove myapp Image"
       shell: "docker rmi myappimage:1.0"
-      ignore_errors: yes
+      #ignore_errors: yes
       
     - name: "Pull docker image from DockerHub"
       docker_image:
