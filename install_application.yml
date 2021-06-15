@@ -81,20 +81,20 @@
          state: absent
 
     - name: "Remove myapp Image"
-      shell: "docker rmi $(docker images {{DOCKER_IMAGE_NAME}})"
+      shell: "docker image rm myappimage"
       ignore_errors: yes
       
     - name: "Pull docker image from DockerHub"
       docker_image:
-         name: "{{DOCKER_IMAGE_NAME}}"
-         tag: "{{BUILD_NUMBER}}"
+         name: "myappimage"
+         tag: "1.0"
          state: present
          source: pull
          
     - name: "Launch docker container"
       docker_container:
          name: "{{docker_container_name}}"
-         image: "{{DOCKER_IMAGE_NAME}}:{{BUILD_NUMBER}}"
+         image: "myappimage:1.0"
          ports:
           - "127.0.0.1:8080:8080"
          links:
