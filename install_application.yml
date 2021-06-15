@@ -75,10 +75,10 @@
           - "0.0.0.0:27000:27000"
          state: started
 
-    - name: "Stop and Remove all myapp containers"
-      docker_container:
-         name: "{{docker_container_name}}"
-         state: absent
+    #- name: "Stop and Remove all myapp containers"
+    #  docker_container:
+    #     name: "{{docker_container_name}}"
+    #     state: absent
 
     - name: "Remove myapp Image"
       shell: "docker rmi raquelbatista/myappimage:1.0"
