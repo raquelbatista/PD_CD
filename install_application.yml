@@ -1,7 +1,7 @@
 ---
 -
   name: Install/Update App
-  hosts: webservers
+  hosts: cds
   become: yes
   vars:
   - docker_container_name: "myapp"
