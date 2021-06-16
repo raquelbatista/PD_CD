@@ -19,7 +19,7 @@ node{
         }
         sh 'docker push vardhanns/phpmysql_app'
         */
-        //docker.withRegistry( 'https://registry.hub.docker.com', 'DockerHubPassword' ) {
+        docker.withRegistry( 'https://registry.hub.docker.com', 'DockerHubPassword' ) {
              
              sh 'sudo docker login -u "raquelbatista" -p "pd_20202021" docker.io'
              //sh 'sudo docker push upasanatestdocker/mysql'
