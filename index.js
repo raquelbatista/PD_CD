@@ -7,6 +7,7 @@ const uri = "mongodb+srv://raquel_batista98:raquel123@clusterpd.lrwyf.mongodb.ne
 const client = new MongoClient (uri, { useNewUrlParser: true});
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('views'));
 
 client.connect(err => {
   db = client.db("mongodb").collection("cds");
