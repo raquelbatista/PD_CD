@@ -30,7 +30,7 @@ node{
     }
     stage('Execute ansible')
     {
-        ansiblePlaybook credentialsId: 'privatekey', disableHostKeyChecking: true, installation: 'ansible2', inventory: 'hosts.inv', playbook: 'install_application.yml'
+        ansiblePlaybook credentialsId: 'private_key', disableHostKeyChecking: true, installation: 'ansible2', inventory: 'hosts.inv', playbook: 'install_application.yml'
         
     }
 }
