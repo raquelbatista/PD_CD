@@ -24,7 +24,7 @@ node{
              sh 'sudo docker login -u "raquelbatista" -p "pd_20202021" docker.io'
              //sh 'sudo docker push upasanatestdocker/mysql'
              //sh 'sudo docker push upasanatestdocker/job1_web1.0'
-             sh 'sudo docker push raquelbatista/myappimage:2.0'
+             sh 'sudo docker push raquelbatista/myappimage:3.0'
             // sh 'docker push upasanatestdocker/mysql'
           
     }
