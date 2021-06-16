@@ -11,9 +11,6 @@
   tasks:
     - debug: 
         msg: "Hello Docker"
-        
-    - name: "git clone"
-      shell: git clone https://github.com/raquelbatista/PD_CD.git
       
     - name: "Check if docker is installed"
       shell: command -v docker >/dev/null 2>&1
@@ -28,10 +25,6 @@
       ignore_errors: yes
 
     - debug: msg="{{is_docker_compose_install}}"
-
-    #- name: "Install required system packages"
-    #  apt: name={{ item }} state=latest update_cache=yes
-    #  loop: [ 'python3-pip', 'python3-setuptools']
 
     - name: "Add Docker Repository"
       apt_repository:
