@@ -94,7 +94,7 @@
     - name: "Launch docker container"
       docker_container:
          name: "{{docker_container_name}}"
-         image: "raquelbatista/myappimage:1.0"
+         image: "raquelbatista/myappimage:2.0"
          ports:
           - "127.0.0.1:8090:8090"
          links:
