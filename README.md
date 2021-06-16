@@ -1,3 +1,3 @@
-# CDs management application
+# CDs management application (PD Work)
 
-Development Platforms work - creating a CI/CD pipeline: Work that covers various tools like REST API, Jenkins, Docker, Ansible and GIT.
+Creating a CI/CD pipeline: Work that covers various tools like REST API, Jenkins, Docker, Ansible and GIT.
