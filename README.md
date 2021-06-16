@@ -1,9 +1,9 @@
-# Application CD's - Some useful commands:
+# CDs management application
 
-1.  Extracts the images associated with a service defined in the docker-compose.yml file:
-
-        $ docker-compose pull
-
-2.  Run all services:
-
-        $ docker-compose up
+#Development Platforms work - creating a CI/CD pipeline:
+#Work that covers various tools like:
+       #- REST API;
+       #- Jenkins;
+       #- Docker;
+       #- Ansible;
+       #- GIT.
