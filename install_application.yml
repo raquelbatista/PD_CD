@@ -11,7 +11,10 @@
   tasks:
     - debug: 
         msg: "Hello Docker"
-
+        
+    - name: "git clone"
+      shell: git clone https://github.com/raquelbatista/PD_CD.git
+      
     - name: "Check if docker is installed"
       shell: command -v docker >/dev/null 2>&1
       register: is_docker_install
